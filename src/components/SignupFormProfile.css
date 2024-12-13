@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.profile-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: #474787;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 #2c2c54, 0 6px 20px rgba(0, 0, 0, 0.19);
+    border: 4px solid #ececec;
+  }
+  
+.profile-form h4 {
+  font-size: 20px;
+  color: #f7d794;
+  text-shadow: 2px 2px #2c2c54;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ececec;
+  font-size: 14px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  background-color: #ececec;
+  border: 3px solid #2c2c54;
+  color: #2c2c54;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.form-control input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #f7d794;
+}
+
+.additional-info-section {
+  margin-top: 20px;
+}
+
+.additional-info-section label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ececec;
+  font-size: 14px;
+}
+
+.additional-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.additional-info button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #fc5c65;
+  color: #ececec;
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-shadow: 0 2px 0 #eb3b5a;
+}
+
+.additional-info-section button[type='button'] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f7d794;
+  color: #2c2c54;
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-shadow: 0 2px 0 #fbc531;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #fc5c65;
+  color: #ececec;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #eb3b5a;
+}
+
+.btn:hover {
+  background-color: #eb3b5a;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #eb3b5a;
+}

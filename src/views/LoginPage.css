@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.container.login-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c2c54;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.screensaver {
+  flex: 0 0 65%;
+  height: 100%;
+  background-image: url('../assets/LoginPage.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container.login-page section {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #474787;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+/*logo*/
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  animation: float 6s ease-in-out infinite;
+  image-rendering: pixelated;
+}
+
+.container.login-page p {
+  color: #f7d794;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Login Type Buttons */
+.login-type {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.login-type .btn {
+  padding: 10px 20px;
+  background-color: #ececec;
+  color: #2c2c54;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  width: auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+}
+
+.login-type .btn.selected,
+.login-type .btn:hover {
+  background-color: #fc5c65;
+  color: #ececec;
+}
+
+/* Form Container Styles */
+.form-container {
+  width: 100%;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 0;
+}
+
+/* Form Control Styles */
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f7d794;
+  font-size: 12px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid #2c2c54;
+  border-radius: 0;
+  font-size: 14px;
+  background-color: #ececec;
+  color: #2c2c54;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.form-control input:focus {
+  border-color: #f7d794;
+  outline: none;
+  box-shadow: 0 0 0 3px #f7d794;
+}
+
+/* Button Styles */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #fc5c65;
+  color: #ececec;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0 4px 0 #eb3b5a;
+}
+
+.btn:hover {
+  background-color: #eb3b5a;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #eb3b5a;
+}
+
+/* Error Message Styles */
+.error {
+  color: #fc5c65;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Forgot Password */
+.forgot-password {
+  color: #f7d794;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container.login-page {
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .screensaver {
+    flex: 0 0 200px;
+    width: 100%;
+  }
+
+  .container.login-page section {
+    flex: 1;
+    width: 100%;
+  }
+
+  .form-container {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container.login-page section {
+    padding: 20px 10px;
+  }
+
+  .login-type .btn {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .form-control input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

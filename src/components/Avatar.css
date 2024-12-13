@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.avatar-display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.avatar-sprite {
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+.avatar-sm .avatar-sprite {
+  transform: scale(3) !important;
+}
+
+.avatar-md .avatar-sprite {
+  transform: scale(8) !important;
+}
+
+.avatar-lg .avatar-sprite {
+  transform: scale(12) !important;
+}
+
+.avatar-xl .avatar-sprite {
+  transform: scale(16) !important;
+}
+.avatar-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #2F2A3F;
+  border: 4px solid #D9B88F;
+  box-shadow: 0 0 0 4px #2F2A3F, 0 0 0 8px #D9B88F;
+  width: fit-content;
+  margin: auto;
+}
+
+.avatar-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  transition: transform 0.2s ease;
+  background-color: #3F3A4F;
+  border: 4px solid #D9B88F;
+  width: 250px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-name {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #D9B88F;
+  font-size: 16px;
+}
+.avatar-preview:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(217, 184, 143, 0.5);
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #D9B88F;
+  font-family: 'Press Start 2P', cursive;
+  width: 40px;
+}
+
+.nav-button:hover {
+  opacity: 0.7;
+  background-color: #3F3A4F;
+  border-radius: 8px;
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.nav-button.prev::after {
+  content: '◄';
+}
+
+.nav-button.next::after {
+  content: '►';
+}
+
+@keyframes avatarChange {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.avatar-preview.changing .avatar-display {
+  animation: avatarChange 0.3s ease-in-out;
+}

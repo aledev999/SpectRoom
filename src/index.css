@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-color: #2c2c54;
+  color: #f7d794;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-page-loader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #2c2c54;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-page-loader .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.full-page-loader .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #f7d794;
+  border-color: #f7d794 transparent #f7d794 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input:not([type="checkbox"]), textarea {
+  border: 3px solid #474787;
+  background-color: #ececec;
+  color: #2c2c54;
+  transition: border-color 0.2s ease-in-out;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
+  height: 50px;
+  padding: 0 20px;
+  max-width: 100%;
+  appearance: none;
+  min-width: 100px;
+  width: 100%;
+  border-radius: 0;
+  margin: 20px 0 0;
+}
+
+textarea {
+  height: 200px;
+  padding-top: 10px;
+}
+
+.add-form {
+  margin-top: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  color: #f7d794;
+  margin-bottom: 10px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+.form-control input[type="checkbox"] {
+  width: auto;
+  flex: unset;
+  height: 20px;
+  margin-right: 20px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #f7d794;
+}
+
+.btn {
+  display: inline-block;
+  color: #ececec;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #fc5c65;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #eb3b5a;
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #eb3b5a;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  overflow: auto;
+  min-height: 300px;
+  background-color: #474787;
+  padding: 30px;
+  padding-top: 60px;
+  border-radius: 0;
+  position: relative;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 30px;
+  }
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #f7d794;
+}
+
+.container .header-btns {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.container a.active button.btn,
+.container .btn.active {
+  background: #eb3b5a;
+  color: #ececec;
+}
+
+.container button.btn {
+  margin-top: 0;
+  background: #ececec;
+  color: #2c2c54;
+}
+
+.container button.btn.transparent {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #f7d794;
+}
+
+.container .header-btns button.btn {
+  border-radius: 0;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page h1, .login-page p {
+  text-align: center;
+  color: #f7d794;
+}
+
+.login-page p {
+  margin-bottom: 24px;
+}
+
+.login-page .login-type {
+  text-align: center;
+}
+
+.login-page .add-form.login {
+  width: 600px;
+  max-width: 100%;
+}
+
+.login-page .add-form .error {
+  text-align: center;
+  color: #fc5c65;
+  margin-top: 8px;
+}
+
+.login-page p.forgot-password {
+  margin-top: 12px;
+  color: #f7d794;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-page.container button.btn.selected,
+.login-page.container button.btn.login {
+  background: #fc5c65;
+  color: #ececec;
+}
+
+.menu-box {
+  padding: 20px;
+  height: 450px;
+  text-align: center;
+  border: 4px solid #f7d794;
+  border-radius: 0;
+  cursor: pointer;
+  background: #474787;
+  transition: background-color 0.3s;
+}
+
+.menu-box:hover {
+  background-color: #5c5c8a;
+}
+
+.link-container {
+  width: 23%;
+}
+
+.main-menu-container {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  margin-top: 50px;        
+  height: 90vh;            
+  justify-content: center; 
+}
+
+.main-menu-title {
+  position: absolute;
+  bottom: 10px;
+  color: #f7d794;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #fc5c65;
+  color: #ececec;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #eb3b5a;
+}
+
+.logout-button:hover {
+  background-color: #eb3b5a;
+}
+
+.logout-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #eb3b5a;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}

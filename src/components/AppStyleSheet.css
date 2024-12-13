@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell.clicked {
+    background-color: #e0e0e0;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}

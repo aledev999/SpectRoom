@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.account-settings {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../assets/accountMenu.png');
+  padding: 20px;
+  background-color: #2F2A3F;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.account-settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3F3A4F;
+  border: 4px solid #D9B88F;
+  box-shadow: 0 4px 0 #2F2A3F, 4px 4px 0 #2F2A3F;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #5BA58C;
+  color: #2F2A3F;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-shadow: 0 4px 0 #3D7A68;
+}
+
+.back-button:hover {
+  background-color: #3D7A68;
+}
+
+.back-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.back-button:disabled {
+  background-color: #6B8FA6;
+  cursor: not-allowed;
+}
+
+
+.settings-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #D9B88F;
+  font-size: 24px;
+  text-shadow: 2px 2px #2F2A3F;
+}
+
+.error-message {
+  background-color: #8B0000;
+  border: 2px solid #D9B88F;
+  color: #D9B88F;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.success-message {
+  background-color: #006400;
+  border: 2px solid #D9B88F;
+  color: #D9B88F;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.tabs-container {
+  border-bottom: 2px solid #D9B88F;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #9ABED5;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #D9B88F;
+}
+
+.tab.active {
+  color: #D9B88F;
+  border-bottom-color: #D9B88F;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px solid #D9B88F;
+  background-color: #2F2A3F;
+}
+
+.settings-section h2 {
+  margin-top: 0;
+  color: #D9B88F;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 8px;
+  color: #9ABED5;
+  font-size: 12px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="password"],
+.form-control input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #D9B88F;
+  background-color: #2F2A3F;
+  color: #D9B88F;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+}
+
+.form-control input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 184, 143, 0.5);
+}
+
+.form-control input:disabled {
+  background-color: #3F3A4F;
+  cursor: not-allowed;
+}
+
+.checkbox-control label {
+  display: flex;
+  align-items: center;
+  color: #9ABED5;
+  font-size: 12px;
+}
+
+.checkbox-control input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #D9B88F;
+  background-color: #2F2A3F;
+  cursor: pointer;
+}
+
+.checkbox-control input[type="checkbox"]:checked {
+  background-color: #5BA58C;
+}
+
+
+.btn-secondary, .btn-danger, .btn-change-password, .btn-delete-account {
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  width: 200px;
+}
+
+.btn-secondary, .btn-change-password {
+  background-color: #5BA58C;
+  color: #2F2A3F;
+  box-shadow: 0 4px 0 #3D7A68;
+}
+
+.btn-secondary:hover, .btn-change-password:hover {
+  background-color: #3D7A68;
+}
+
+.btn-danger, .btn-delete-account {
+  background-color: #8B0000;
+  color: #D9B88F;
+  box-shadow: 0 4px 0 #5C0000;
+}
+
+.btn-danger:hover, .btn-delete-account:hover {
+  background-color: #5C0000;
+}
+
+.btn-secondary:active, .btn-danger:active,
+.btn-change-password:active, .btn-delete-account:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-secondary:disabled, .btn-danger:disabled,
+.btn-change-password:disabled, .btn-delete-account:disabled {
+  background-color: #6B8FA6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+.button-group, .account-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.change-password-form {
+  margin-top: 20px;
+}
+
+
+.personal-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-details-header h2 {
+  margin: 0;
+  color: #D9B88F;
+  font-size: 18px;
+}
+
+.personal-details-header .edit-button,
+.personal-details-header .save-button {
+  background-color: #5BA58C;
+  color: #2F2A3F;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-shadow: 0 4px 0 #3D7A68;
+}
+
+.personal-details-header .edit-button:hover,
+.personal-details-header .save-button:hover {
+  background-color: #3D7A68;
+}
+
+.personal-details-header .edit-button:active,
+.personal-details-header .save-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.personal-details-header .edit-button:disabled,
+.personal-details-header .save-button:disabled {
+  background-color: #6B8FA6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.additional-info-section {
+  margin-top: 20px;
+}
+
+.additional-info-section label {
+  display: block;
+  margin-bottom: 8px;
+  color: #9ABED5;
+  font-size: 12px;
+}
+
+.additional-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.additional-info input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.remove-contact-button,
+.add-contact-button {
+  background-color: #5BA58C;
+  color: #2F2A3F;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  box-shadow: 0 4px 0 #3D7A68;
+}
+
+.remove-contact-button:hover,
+.add-contact-button:hover {
+  background-color: #3D7A68;
+}
+
+.remove-contact-button:active,
+.add-contact-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.save-button {
+  background-color: #5BA58C;
+  color: #2F2A3F;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  box-shadow: 0 4px 0 #3D7A68;
+}
+
+.save-button:hover {
+  background-color: #3D7A68;
+}
+
+.save-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.save-button:disabled {
+  background-color: #6B8FA6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+.view-mode p {
+  margin: 10px 0;
+  color: #D9B88F;
+  font-size: 12px;
+}
+
+.secondary-contacts ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.secondary-contacts li {
+  padding: 5px 0;
+  border-bottom: 2px solid #D9B88F;
+  color: #9ABED5;
+  font-size: 12px;
+}
+
+.secondary-contacts li:last-child {
+  border-bottom: none;
+}
+
+
+.loading-spinner {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #D9B88F;
+}
+
+
+.email-display {
+  background-color: #3F3A4F;
+  padding: 10px;
+  border: 2px solid #D9B88F;
+  color: #9ABED5;
+  margin-bottom: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  width: 380px;
+}
+
+
+.personal-info {
+  color: #D9B88F;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+}
+
+.personal-info .label {
+  color: #9ABED5;
+  margin-right: 10px;
+}
+
+.personal-info .value {
+  color: #D9B88F;
+}
+
+.not-provided {
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .account-settings-container {
+    padding: 15px;
+  }
+
+  .settings-title {
+    font-size: 20px;
+  }
+
+  .btn-change-password,
+  .btn-delete-account {
+    padding: 15px 20px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-control input[type="text"],
+  .form-control input[type="email"],
+  .form-control input[type="password"],
+  .form-control input[type="tel"] {
+    font-size: 10px;
+  }
+
+  .personal-info {
+    font-size: 12px;
+  }
+  .auth-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .auth-message {
+    color: #D9B88F;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-8px); }
+    80% { transform: translateX(8px); }
+  }
+  
+  .shake {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+
